@@ -1,0 +1,15 @@
+This program builds a graph of pointer dependancies.
+
+Pour construire le programme :
+$ make depend
+$ make
+$ make install
+
+Éxecution du programme : construction du graphe de main.c
+$ frama-c -constraint main.c
+produit temp.dot, pour obtenir une image :
+$ dot temp.dot -Tpng > constraint.png
+
+Autre :
+$ frama-c -printast main.c
+affiche un "dump" de chaque stmt de l'ast
